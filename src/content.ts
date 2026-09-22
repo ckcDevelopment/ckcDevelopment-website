@@ -1,12 +1,15 @@
 export const site = {
   name: "CKC Development",
   shortName: "CKC",
+  club: "Cool Kids Club",
   domain: "ckcDevelopment.com",
   url: "https://ckcdevelopment.com",
   email: "hello@ckcdevelopment.com",
   tagline: "Software you own. Infrastructure you keep.",
   description:
     "CKC Development creates custom software and designs and manages IT infrastructure for in-house management and ownership.",
+  clubLine:
+    "CKC stands for Cool Kids Club — serious about systems you own, allergic to beige consulting theater.",
 } as const;
 
 export const nav = [
@@ -25,6 +28,7 @@ export const principles = [
   "Custom architecture",
   "Day-two operations",
   "Software + infrastructure",
+  "Cool Kids Club",
 ] as const;
 
 export const services = [

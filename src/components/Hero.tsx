@@ -36,7 +36,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] flex-col justify-end pb-16 pt-28 sm:justify-center sm:pb-24 sm:pt-32"
+      className="relative flex min-h-[100svh] flex-col justify-end pb-16 pt-32 sm:justify-center sm:pb-24 sm:pt-36"
     >
       <div className="site-shell grid items-center gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-10">
         <div>
@@ -46,19 +46,19 @@ export function Hero() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="eyebrow"
           >
-            {site.domain}
+            {site.club}
           </motion.p>
 
           <motion.h1
             initial={reduce ? false : { opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 max-w-[12ch] font-serif text-[3rem] leading-[0.98] tracking-tight text-stone sm:text-6xl lg:text-[5.15rem]"
+            className="mt-6 max-w-[12ch] font-display text-[3rem] leading-[0.98] tracking-tight text-stone sm:text-6xl lg:text-[5.15rem]"
           >
             Software you own.
             <br />
             Infrastructure you{" "}
-            <em className="italic text-brass">keep</em>.
+            <em className="italic text-magenta">keep</em>.
           </motion.h1>
 
           <motion.p
@@ -95,7 +95,7 @@ export function Hero() {
           className="relative mx-auto w-full max-w-md lg:max-w-none"
           aria-hidden="true"
         >
-          <div className="absolute -inset-8 rounded-full bg-brass/8 blur-3xl" />
+          <div className="absolute -inset-8 rounded-full bg-magenta/10 blur-3xl" />
           <div className="relative flex flex-col gap-3">
             {layers.map((layer, index) => {
               const depth = index - 1.5;
@@ -114,15 +114,15 @@ export function Hero() {
                   className={cn(
                     "flex items-center justify-between rounded-2xl border px-5 py-4 backdrop-blur-md",
                     index === layers.length - 1
-                      ? "border-brass/45 bg-brass/12"
+                      ? "border-lime/45 bg-lime/10"
                       : "border-white/10 bg-panel/70",
                   )}
                 >
                   <div>
-                    <p className="font-mono text-[0.65rem] tracking-[0.2em] text-brass uppercase">
+                    <p className="font-mono text-[0.65rem] tracking-[0.2em] text-cyan uppercase">
                       Layer 0{index + 1}
                     </p>
-                    <p className="mt-1 font-serif text-2xl text-stone">
+                    <p className="mt-1 font-display text-2xl text-stone">
                       {layer.label}
                     </p>
                   </div>
@@ -144,7 +144,7 @@ export function Hero() {
         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-3 font-mono text-[0.65rem] tracking-[0.22em] text-muted uppercase sm:flex"
       >
         <span className="relative flex h-9 w-px overflow-hidden bg-white/10">
-          <span className="absolute inset-x-0 h-1/2 animate-pulse bg-brass" />
+          <span className="absolute inset-x-0 h-1/2 animate-pulse bg-lime" />
         </span>
         Scroll
       </Link>

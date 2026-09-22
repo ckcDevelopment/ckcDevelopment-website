@@ -46,9 +46,9 @@ export function Header() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <div className="site-shell flex h-[4.25rem] items-center justify-between">
+      <div className="site-shell flex h-[4.75rem] items-center justify-between sm:h-20">
         <Link href="/" className="rounded-sm" aria-label={`${site.name} home`}>
-          <Logo />
+          <Logo variant="nav" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
@@ -101,7 +101,7 @@ export function Header() {
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={reduce ? undefined : { opacity: 0 }}
-            className="fixed inset-0 z-40 flex flex-col justify-end bg-ink/95 px-6 pb-10 pt-24 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col justify-end bg-ink/95 px-6 pb-10 pt-28 backdrop-blur-xl lg:hidden"
           >
             <nav className="flex flex-col gap-2">
               {nav.map((item, index) => (
@@ -110,7 +110,7 @@ export function Header() {
                   initial={reduce ? false : { opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.05 * index }}
-                  className="border-b border-white/8 py-4 font-serif text-4xl text-stone"
+                  className="border-b border-white/8 py-4 font-display text-4xl text-stone"
                 >
                   <Link href={item.href} onClick={() => setOpen(false)}>
                     {item.label}
@@ -121,7 +121,7 @@ export function Header() {
             <Link
               href="/#contact"
               onClick={() => setOpen(false)}
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-brass px-6 py-3 text-sm font-medium text-ink"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-cyan px-6 py-3 text-sm font-medium text-ink"
             >
               Talk with us
             </Link>

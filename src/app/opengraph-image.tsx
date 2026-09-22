@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { site } from "@/content";
 
@@ -5,7 +7,10 @@ export const alt = `${site.name} — ${site.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const logo = await readFile(join(process.cwd(), "public/brand/ckc-logo.png"));
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -13,50 +18,42 @@ export default function OpenGraphImage() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
+          alignItems: "center",
           justifyContent: "space-between",
-          background: "#080a09",
-          color: "#ece7dc",
-          padding: "72px",
+          background: "#050507",
+          color: "#f3f3f8",
+          padding: "56px 72px",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "18px",
-            fontSize: 28,
-            letterSpacing: 6,
-            textTransform: "uppercase",
-            color: "#c9a56a",
-          }}
-        >
-          CKC DEVELOPMENT
-        </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", flexDirection: "column", maxWidth: 620 }}>
           <div
             style={{
-              fontSize: 72,
-              lineHeight: 1.05,
-              letterSpacing: -1.5,
-              maxWidth: 900,
+              fontSize: 22,
+              letterSpacing: 6,
+              textTransform: "uppercase",
+              color: "#3ee0ff",
             }}
           >
-            Software you own. Infrastructure you keep.
+            COOL KIDS CLUB
           </div>
           <div
             style={{
               marginTop: 28,
-              fontSize: 28,
-              color: "#9aa198",
-              maxWidth: 760,
+              fontSize: 64,
+              lineHeight: 1.05,
+              letterSpacing: -1.5,
             }}
           >
-            Custom software, plus IT infrastructure designed for in-house
-            ownership.
+            Software you own. Infrastructure you keep.
+          </div>
+          <div style={{ marginTop: 24, fontSize: 24, color: "#9a9ab0" }}>
+            Custom software + IT infrastructure for in-house ownership.
+          </div>
+          <div style={{ marginTop: 36, fontSize: 20, color: "#ff4ec8" }}>
+            {site.domain}
           </div>
         </div>
-        <div style={{ fontSize: 22, color: "#c9a56a" }}>{site.domain}</div>
+        <img src={logoSrc} width={420} height={420} alt="" />
       </div>
     ),
     size,

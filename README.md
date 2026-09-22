@@ -2,6 +2,8 @@
 
 Marketing website for [ckcDevelopment.com](https://ckcdevelopment.com) — custom software, plus the design and management of IT infrastructure for in-house ownership.
 
+CKC stands for **Cool Kids Club**.
+
 ## Stack
 
 - [Next.js](https://nextjs.org) App Router (TypeScript)
@@ -32,11 +34,12 @@ npm start
 | `src/app/page.tsx` | Homepage composition |
 | `src/content.ts` | Copy, services, and contact fields |
 | `src/components/` | Header, hero, services, approach, why CKC, contact, footer, ambient field |
-| `src/app/icon.svg` / `public/logo.svg` | CKC mark |
-| `src/app/opengraph-image.tsx` | Social preview |
+| `public/brand/ckc-logo.webp` | Primary graffiti lockup |
+| `src/app/icon.png` / `src/app/apple-icon.png` | Favicon from the CKC letterforms |
+| `src/app/opengraph-image.tsx` | Social preview with the logo |
 
 The contact form is front-end only: submit shows a confirmation and points people to `hello@ckcdevelopment.com`. Wire a route handler or form service in `src/components/Contact.tsx` when you are ready.
 
 ## Design notes
 
-Dark olive ink, brass, and sage — a studio/atelier palette rather than a generic purple gradient. Interactive service cards expand on click, keyboard, or Enter/Space. Motion respects `prefers-reduced-motion`.
+Neon-on-black graffiti language from the official Cool Kids Club mark: cyan, magenta, purple, and lime on deep black. Interactive service cards expand on click, keyboard, or Enter/Space. Motion respects `prefers-reduced-motion`.

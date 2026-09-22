@@ -47,9 +47,9 @@ export function MagneticLink({
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-[background-color,color,border-color,box-shadow] duration-300 will-change-transform",
         variant === "primary" &&
-          "bg-brass text-ink shadow-[0_0_0_1px_color-mix(in_srgb,var(--brass-2)_35%,transparent)] hover:bg-brass-2",
+          "bg-cyan text-ink shadow-[0_0_0_1px_color-mix(in_srgb,var(--magenta)_40%,transparent)] hover:bg-magenta hover:text-stone",
         variant === "ghost" &&
-          "border border-brass/30 bg-transparent text-stone hover:border-brass hover:text-brass-2",
+          "border border-cyan/35 bg-transparent text-stone hover:border-lime hover:text-lime",
         className,
       )}
     >

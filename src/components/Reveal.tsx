@@ -49,7 +49,7 @@ export function SectionHeading({
       <p className="eyebrow">
         {index} — {kicker}
       </p>
-      <h2 className="mt-4 font-serif text-4xl leading-[1.12] tracking-tight text-stone sm:text-5xl">
+      <h2 className="mt-4 font-display text-4xl leading-[1.12] tracking-tight text-stone sm:text-5xl">
         {title}
       </h2>
       {body ? (

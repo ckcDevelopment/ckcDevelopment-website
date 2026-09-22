@@ -29,12 +29,12 @@ export function Contact() {
           <Reveal delay={0.1} className="mt-10 space-y-5">
             <a
               href={`mailto:${site.email}`}
-              className="group block rounded-2xl border border-white/10 bg-panel/70 p-5 transition hover:border-brass/40"
+              className="group block rounded-2xl border border-white/10 bg-panel/70 p-5 transition hover:border-cyan/40"
             >
               <p className="font-mono text-[0.65rem] tracking-[0.18em] text-muted uppercase">
                 Email
               </p>
-              <p className="mt-2 font-serif text-2xl text-brass-2 group-hover:text-brass">
+              <p className="mt-2 font-display text-2xl text-cyan group-hover:text-magenta">
                 {site.email}
               </p>
             </a>
@@ -42,7 +42,7 @@ export function Contact() {
               <p className="font-mono text-[0.65rem] tracking-[0.18em] text-muted uppercase">
                 Domain
               </p>
-              <p className="mt-2 font-serif text-2xl text-stone">{site.domain}</p>
+              <p className="mt-2 font-display text-2xl text-stone">{site.domain}</p>
             </div>
           </Reveal>
         </div>
@@ -58,7 +58,7 @@ export function Contact() {
                   className="flex min-h-[28rem] flex-col justify-center"
                 >
                   <p className="eyebrow">Received locally</p>
-                  <h3 className="mt-4 font-serif text-3xl text-stone">
+                  <h3 className="mt-4 font-display text-3xl text-stone">
                     Thank you — we have the outline.
                   </h3>
                   <p className="mt-4 max-w-md text-base leading-7 text-muted">
@@ -66,7 +66,7 @@ export function Contact() {
                     same note to{" "}
                     <a
                       href={`mailto:${site.email}`}
-                      className="text-brass underline-offset-4 hover:underline"
+                      className="text-cyan underline-offset-4 hover:underline"
                     >
                       {site.email}
                     </a>{" "}
@@ -75,7 +75,7 @@ export function Contact() {
                   <button
                     type="button"
                     onClick={() => setStatus("idle")}
-                    className="mt-8 self-start rounded-full border border-brass/35 px-5 py-2.5 text-sm text-stone hover:border-brass"
+                    className="mt-8 self-start rounded-full border border-cyan/40 px-5 py-2.5 text-sm text-stone hover:border-lime"
                   >
                     Compose another
                   </button>
@@ -149,7 +149,7 @@ export function Contact() {
                     </p>
                     <button
                       type="submit"
-                      className="rounded-full bg-brass px-6 py-3 text-sm font-medium text-ink transition hover:bg-brass-2"
+                      className="rounded-full bg-cyan px-6 py-3 text-sm font-medium text-ink transition hover:bg-magenta hover:text-stone"
                     >
                       Send message
                     </button>

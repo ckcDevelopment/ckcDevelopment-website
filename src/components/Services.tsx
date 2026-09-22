@@ -62,24 +62,24 @@ export function Services() {
                   onMouseMove={(event) => onMove(service.id, event)}
                   className={cn(
                     "group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-panel/80 p-6 transition duration-300 sm:p-8",
-                    "hover:border-brass/40 hover:-translate-y-0.5 focus-visible:border-brass",
-                    open && "border-brass/50",
+                    "hover:border-cyan/45 hover:-translate-y-0.5 focus-visible:border-cyan",
+                    open && "border-magenta/55",
                   )}
                 >
                   <div
                     className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     style={{
                       background: point
-                        ? `radial-gradient(420px circle at ${point.x}px ${point.y}px, rgba(201,165,106,0.14), transparent 55%)`
+                        ? `radial-gradient(420px circle at ${point.x}px ${point.y}px, rgba(62,224,255,0.16), transparent 55%)`
                         : undefined,
                     }}
                   />
                   <div className="relative">
                     <div className="flex items-start justify-between gap-4">
-                      <p className="font-mono text-sm text-brass">{service.index}</p>
+                      <p className="font-mono text-sm text-cyan">{service.index}</p>
                       <ServiceIcon id={service.id} />
                     </div>
-                    <h3 className="mt-8 font-serif text-2xl leading-snug text-stone sm:text-[1.7rem]">
+                    <h3 className="mt-8 font-display text-2xl leading-snug text-stone sm:text-[1.7rem]">
                       {service.title}
                     </h3>
                     <p className="mt-4 text-sm leading-6 text-muted sm:text-base">
@@ -100,7 +100,7 @@ export function Services() {
                         <p className="pt-5 text-sm leading-6 text-stone/85">
                           {service.detail}
                         </p>
-                        <p className="mt-4 border-t border-white/8 pt-4 font-mono text-[0.68rem] tracking-[0.14em] text-brass uppercase">
+                        <p className="mt-4 border-t border-white/8 pt-4 font-mono text-[0.68rem] tracking-[0.14em] text-lime uppercase">
                           What you keep — {service.keep}
                         </p>
                       </div>
@@ -115,11 +115,11 @@ export function Services() {
           })}
 
           <Reveal delay={0.18} className="lg:col-span-12">
-            <div className="overflow-hidden rounded-3xl border border-brass/25 bg-gradient-to-br from-panel via-ink-2 to-panel-2 p-6 sm:p-10">
+            <div className="overflow-hidden rounded-3xl border border-magenta/30 bg-gradient-to-br from-panel via-ink-2 to-panel-2 p-6 sm:p-10">
               <p className="eyebrow">The broader offering</p>
               <div className="mt-4 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end">
                 <div>
-                  <h3 className="font-serif text-3xl leading-tight text-stone sm:text-4xl">
+                  <h3 className="font-display text-3xl leading-tight text-stone sm:text-4xl">
                     {offering.title}
                   </h3>
                   <p className="mt-5 max-w-2xl text-base leading-7 text-muted">
@@ -129,7 +129,7 @@ export function Services() {
                 <ol className="space-y-5">
                   {offering.points.map((point, index) => (
                     <li key={point.title} className="flex gap-4">
-                      <span className="font-mono text-xs text-brass">0{index + 1}</span>
+                      <span className="font-mono text-xs text-cyan">0{index + 1}</span>
                       <div>
                         <p className="font-medium text-stone">{point.title}</p>
                         <p className="mt-1 text-sm leading-6 text-muted">
@@ -149,7 +149,7 @@ export function Services() {
 }
 
 function ServiceIcon({ id }: { id: string }) {
-  const common = "size-10 text-brass";
+  const common = "size-10 text-magenta";
   if (id === "engineering") {
     return (
       <svg viewBox="0 0 40 40" className={common} fill="none" aria-hidden="true">

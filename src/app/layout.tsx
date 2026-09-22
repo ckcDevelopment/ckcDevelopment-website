@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist, Geist_Mono, Syne } from "next/font/google";
 import { AmbientBackground } from "@/components/AmbientBackground";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -18,11 +18,9 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const instrument = Instrument_Serif({
-  weight: "400",
-  style: ["normal", "italic"],
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-instrument",
+  variable: "--font-syne",
   display: "swap",
 });
 
@@ -36,6 +34,7 @@ export const metadata: Metadata = {
   applicationName: site.name,
   keywords: [
     "CKC Development",
+    "Cool Kids Club",
     "custom software",
     "IT infrastructure",
     "software engineering",
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#080a09",
+  themeColor: "#050507",
   colorScheme: "dark",
 };
 
@@ -74,12 +73,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${instrument.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ink font-sans text-stone">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-brass focus:px-4 focus:py-2 focus:text-ink"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-lime focus:px-4 focus:py-2 focus:text-ink"
         >
           Skip to content
         </a>

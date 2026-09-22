@@ -16,7 +16,7 @@ export function CapabilityStrip() {
               aria-hidden={index >= principles.length}
               className="flex items-center px-6 font-mono text-[0.72rem] tracking-[0.22em] text-muted uppercase"
             >
-              <span className="mr-6 inline-block size-1.5 rounded-full bg-brass/80" />
+              <span className="mr-6 inline-block size-1.5 rounded-full bg-lime" />
               {item}
             </span>
           ))}

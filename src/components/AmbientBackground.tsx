@@ -63,7 +63,12 @@ export function AmbientBackground() {
         }
 
         gfx.beginPath();
-        gfx.fillStyle = "rgba(201,165,106,0.55)";
+        gfx.fillStyle =
+          i % 3 === 0
+            ? "rgba(62,224,255,0.6)"
+            : i % 3 === 1
+              ? "rgba(255,78,200,0.55)"
+              : "rgba(198,255,61,0.5)";
         gfx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
         gfx.fill();
 
@@ -74,7 +79,7 @@ export function AmbientBackground() {
           const dist = Math.hypot(dx, dy);
           if (dist < limit) {
             const alpha = (1 - dist / limit) * 0.22;
-            gfx.strokeStyle = `rgba(201,165,106,${alpha})`;
+            gfx.strokeStyle = `rgba(168,85,255,${alpha})`;
             gfx.lineWidth = 0.7;
             gfx.beginPath();
             gfx.moveTo(a.x, a.y);
