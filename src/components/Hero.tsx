@@ -41,7 +41,7 @@ export function Hero() {
       <div className="site-shell grid items-center gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-10">
         <div>
           <motion.p
-            initial={reduce ? false : { opacity: 0, y: 16 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="eyebrow"
@@ -50,7 +50,7 @@ export function Hero() {
           </motion.p>
 
           <motion.h1
-            initial={reduce ? false : { opacity: 0, y: 28 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 max-w-[12ch] font-display text-[3rem] leading-[0.98] tracking-tight text-stone sm:text-6xl lg:text-[5.15rem]"
@@ -62,7 +62,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            initial={reduce ? false : { opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="mt-7 max-w-xl text-base leading-7 text-muted sm:text-lg"
@@ -73,7 +73,7 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={reduce ? false : { opacity: 0, y: 16 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.28 }}
             className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
@@ -89,7 +89,7 @@ export function Hero() {
           ref={stageRef}
           onMouseMove={onMove}
           onMouseLeave={onLeave}
-          initial={reduce ? false : { opacity: 0, y: 24 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.22 }}
           className="relative mx-auto w-full max-w-md lg:max-w-none"
