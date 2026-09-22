@@ -46,8 +46,12 @@ export function Header() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <div className="site-shell flex h-[4.75rem] items-center justify-between sm:h-20">
-        <Link href="/" className="rounded-sm" aria-label={`${site.name} home`}>
+      <div className="site-shell flex h-[4.5rem] items-center justify-between sm:h-[4.75rem]">
+        <Link
+          href="/"
+          className="flex shrink-0 items-center"
+          aria-label={`${site.name} home`}
+        >
           <Logo variant="nav" />
         </Link>
 

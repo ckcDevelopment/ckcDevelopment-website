@@ -34,7 +34,8 @@ npm start
 | `src/app/page.tsx` | Homepage composition |
 | `src/content.ts` | Copy, services, and contact fields |
 | `src/components/` | Header, hero, services, approach, why CKC, contact, footer, ambient field |
-| `public/brand/ckc-logo.webp` | Primary graffiti lockup |
+| `public/brand/ckc-mark.webp` | Transparent graffiti mark for nav/footer |
+| `public/brand/ckc-logo.png` | Full lockup on black for Open Graph |
 | `src/app/icon.png` / `src/app/apple-icon.png` | Favicon from the CKC letterforms |
 | `src/app/opengraph-image.tsx` | Social preview with the logo |
 

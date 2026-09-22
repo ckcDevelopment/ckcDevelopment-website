@@ -73,6 +73,11 @@ body {
   }
 }
 
+.brand-mark {
+  background: transparent;
+  display: block;
+}
+
 .eyebrow {
   font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 0.6875rem;

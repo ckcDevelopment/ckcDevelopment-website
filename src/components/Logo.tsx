@@ -3,26 +3,37 @@ import { cn } from "@/lib/cn";
 
 type LogoProps = {
   className?: string;
-  variant?: "nav" | "footer" | "hero";
+  variant?: "nav" | "footer";
 };
 
-const sizes = {
-  nav: { box: 64, className: "h-16 w-16" },
-  footer: { box: 168, className: "h-[9.5rem] w-[9.5rem] sm:h-44 sm:w-44" },
-  hero: { box: 280, className: "h-52 w-52 sm:h-64 sm:w-64" },
+const variants = {
+  nav: {
+    className: "h-[3.4rem] w-auto sm:h-[3.85rem]",
+    sizes: "80px",
+  },
+  footer: {
+    className: "h-28 w-auto sm:h-36",
+    sizes: "220px",
+  },
 } as const;
 
 export function Logo({ className, variant = "nav" }: LogoProps) {
-  const size = sizes[variant];
+  const config = variants[variant];
 
   return (
     <Image
-      src="/brand/ckc-logo.webp"
+      src="/brand/ckc-mark.webp"
       alt="CKC Development — Cool Kids Club"
-      width={size.box}
-      height={size.box}
-      priority={variant === "nav" || variant === "hero"}
-      className={cn("object-contain", size.className, className)}
+      width={757}
+      height={512}
+      priority={variant === "nav"}
+      sizes={config.sizes}
+      className={cn(
+        "brand-mark bg-transparent object-contain object-left",
+        config.className,
+        className,
+      )}
+      style={{ width: "auto" }}
     />
   );
 }
